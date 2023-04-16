@@ -56,7 +56,7 @@ export default function Navbar() {
                   </Modal>
                 </li>
                 <li>
-                  <NavLink className="list-item" to="/login">
+                  <NavLink className="list-item">
                     Login
                   </NavLink>
                 </li>

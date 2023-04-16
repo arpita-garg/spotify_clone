@@ -17,7 +17,7 @@ function App() {
     <Route path="/support" element={<Support/>} />
     <Route path="/download" element={<Download/>} />
     {/* <Route path="/signup" element={<Signup/>} /> */}
-    <Route path="/login" element={<Login/>} />
+    {/* <Route path="/login" element={<Login/>} /> */}
    </Routes>
    </BrowserRouter>
    </>
