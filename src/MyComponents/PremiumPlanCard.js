@@ -11,13 +11,16 @@ export default function PremiumPlanCard({premiumCardData}) {
         <div className="container">
           <div className="card-body">
           
-          
+          {console.log('currentElement' , currentElement)}
             <div className="avail-name">
+              {currentElement.nasa && 
+              
             <button className="free">
                 <span>
                 {currentElement.nasa}
                 </span>
               </button>
+              }
             <div className="plan-avail">{currentElement.avail}</div>
             <div className="pp-name">
               

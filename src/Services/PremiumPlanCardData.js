@@ -1,7 +1,7 @@
 const PremiumPlanData = [
   {
     avail: "One-time plans available",
-    nasa: "        ",
+    nasa: "",
     mini: "Mini",
     name1: "From ₹7/day",
     name2: "1 account on mobile only",

@@ -109,6 +109,7 @@ export const StyledForm = styled.div`
   .form-email {
     display: flex;
     flex-direction: column;
+    padding-block-end: var(--spacer-1,24px);
   }
 
   .form-email-label {
@@ -118,8 +119,7 @@ export const StyledForm = styled.div`
   }
 
   input[type="email"],
-  input[type="password"],
-  input[type="text"] {
+  input[type="password"] {
     appearance: none;
     border: 0px;
     font-size: 1rem;
@@ -134,36 +134,29 @@ export const StyledForm = styled.div`
     color: var(--text-base, #000000);
   }
 
-  .alter.nav-link {
+  /* .alter.nav-link {
     color: #117a37;
     text-decoration: underline;
     font-size: 14px;
     font-weight: 600;
-  }
+  } */
 
-  .form-confirm-email {
+  /* .form-confirm-email {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     padding-block-end: var(--spacer-1, 24px);
     margin-top: 20px;
-  }
+  } */
 
-  .confirm-email-label,
-  .password-label,
-  .profile-name-label,
-  .dob-label,
-  .gender-label {
+  .password-label
+   {
     font-size: 0.875rem;
     font-weight: 700;
     padding-block-end: var(--spacer--2, 8px);
   }
 
-  .form-password,
-  .form-profile-name,
-  .form-dob,
-  .form-gender,
-  .form-check1,
-  .form-check2 {
+  .form-password
+  {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     padding-block-end: var(--spacer-1, 24px);
@@ -195,7 +188,7 @@ export const StyledForm = styled.div`
     width: 60%;
   }
   .month-input-label{
-    width: 50%.n;
+    width: 50%;
   }
 
   .month-input {

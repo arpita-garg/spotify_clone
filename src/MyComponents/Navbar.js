@@ -1,13 +1,15 @@
 import React from "react";
-import { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { useState } from "react";
+import { Button, Modal } from "antd";
 import { StyledNavDiv } from "../Style/Navbar.style";
 import spotify from "../Assets/Spotify-emblem.jpg";
 import { NavLink } from "react-router-dom";
 import Signup from "../Autho/Signup";
+import Login from "../Autho/Login";
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalLoginOpen, setIsModaLoginOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -17,8 +19,17 @@ export default function Navbar() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  const showLoginModal = () => {
+    setIsModaLoginOpen(true);
+  }
+  const handleLoginOk = () => {
+    setIsModaLoginOpen(false);
+  }
+  const handleLoginCancel = () => {
+    setIsModaLoginOpen(false);
+  }
   return (
-    
     <>
       <StyledNavDiv className="Navbar-wrapper">
         <nav>
@@ -51,14 +62,28 @@ export default function Navbar() {
                   <NavLink className="list-item" onClick={showModal}>
                     Sign up
                   </NavLink>
-                  <Modal title="Sign Up" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                    <Signup></Signup>
+                  
+                  <Modal
+                    title="Sign Up"
+                    open={isModalOpen}
+                    onOk={handleOk}
+                    onCancel={handleCancel}
+                  >
+                    <Signup data={showLoginModal}></Signup>
                   </Modal>
                 </li>
                 <li>
-                  <NavLink className="list-item">
-                    Login
+                  <NavLink className="list-item" onClick={showLoginModal}>
+                  Login
                   </NavLink>
+                  <Modal
+                      title="Login"
+                      open={isModalLoginOpen}
+                      onOk={handleLoginOk}
+                      onCancel={handleLoginCancel}
+                    >
+                      <Login></Login>
+                    </Modal>
                 </li>
               </ul>
             </div>
